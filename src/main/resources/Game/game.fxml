@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" stylesheets="@Css/Application.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Game.GameController">
+   <children>
+      <Pane fx:id="gamePanel" prefHeight="720.0" prefWidth="1280.0">
+         <children>
+            <ImageView fx:id="gameBackground" fitHeight="720.0" fitWidth="1280.0" pickOnBounds="true" preserveRatio="true">
+               <effect>
+                  <DropShadow height="1.0" radius="0.0" width="0.0">
+                     <color>
+                        <Color red="0.44736841320991516" green="0.07456140220165253" blue="0.07456140220165253" />
+                     </color>
+                  </DropShadow>
+               </effect>
+               <viewport>
+                  <Rectangle2D height="720.0" width="1280.0" />
+               </viewport>
+               <image>
+                  <Image url="@Images/BG_Game.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="pokemonMysteryEditionImage" fitHeight="475.0" fitWidth="475.0" layoutX="120.0" layoutY="123.0" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="countDownLabel" alignment="CENTER" layoutX="14.0" layoutY="14.0" prefHeight="70.0" prefWidth="77.0" textAlignment="CENTER" textFill="#07fc38">
+               <font>
+                  <Font name="System Bold" size="48.0" />
+               </font>
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Label>
+            <Pane fx:id="paneRed" layoutX="1037.0" layoutY="42.0" onMouseEntered="#onMouseEnteredRectangle" onMouseExited="#onMouseExitedRectangle" prefHeight="75.0" prefWidth="200.0">
+               <effect>
+                  <DropShadow>
+                     <color>
+                        <Color red="1.0" green="0.5411764979362488" blue="0.501960813999176" />
+                     </color>
+                  </DropShadow>
+               </effect>
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" height="75.0" stroke="#b21e1e" strokeType="INSIDE" strokeWidth="2.0" width="200.0">
+                     <fill>
+                        <LinearGradient endX="1.0" endY="0.009478672985781977" startX="1.0" startY="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.8274509906768799" green="0.18431372940540314" blue="0.18431372940540314" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.006711409395973154">
+                                 <color>
+                                    <Color red="0.8274509906768799" green="0.18431372940540314" blue="0.18431372940540314" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.38981420854477">
+                                 <color>
+                                    <Color red="0.9372549057006836" green="0.32549020648002625" blue="0.3137255012989044" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.9372549057006836" green="0.6039215922355652" blue="0.6039215922355652" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                  </Rectangle>
+                  <Text fx:id="textRed" boundsType="VISUAL" fill="WHITE" layoutX="100.0" layoutY="51.0" onMouseClicked="#onMouseClickedCheckResult" stroke="BLACK" strokeType="OUTSIDE" textAlignment="CENTER">
+                     <font>
+                        <Font name="Pokemon Emerald Latin FC Regular" size="24.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Text>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </Pane>
+            <Pane fx:id="paneYellow" layoutX="1037.0" layoutY="140.0" onMouseEntered="#onMouseEnteredRectangle" onMouseExited="#onMouseExitedRectangle" prefHeight="75.0" prefWidth="200.0">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" height="75.0" stroke="#e34c00" strokeType="INSIDE" strokeWidth="2.0" width="200.0">
+                     <fill>
+                        <LinearGradient endX="1.0" endY="0.009478672985781977" startX="1.0" startY="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.9843137264251709" green="0.5490196347236633" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.3428343427729579">
+                                 <color>
+                                    <Color red="1.0" green="0.6458333134651184" blue="0.15000000596046448" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="0.7958333492279053" blue="0.5099999904632568" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                  </Rectangle>
+                  <Text fx:id="textYellow" boundsType="VISUAL" fill="WHITE" layoutX="100.0" layoutY="47.0" onMouseClicked="#onMouseClickedCheckResult" stroke="BLACK" strokeType="OUTSIDE" textAlignment="CENTER">
+                     <font>
+                        <Font name="Pokemon Emerald Latin FC Regular" size="24.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Text>
+               </children>
+               <effect>
+                  <DropShadow>
+                     <color>
+                        <Color red="1.0" green="0.8196078538894653" blue="0.501960813999176" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Pane>
+            <Pane fx:id="paneGreen" layoutX="1037.0" layoutY="234.0" onMouseEntered="#onMouseEnteredRectangle" onMouseExited="#onMouseExitedRectangle" prefHeight="75.0" prefWidth="200.0">
+               <effect>
+                  <DropShadow>
+                     <color>
+                        <Color red="0.7254902124404907" green="0.9647058844566345" blue="0.7921568751335144" />
+                     </color>
+                  </DropShadow>
+               </effect>
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" height="75.0" stroke="#1b5e20" strokeType="INSIDE" strokeWidth="2.0" width="200.0">
+                     <fill>
+                        <LinearGradient endX="1.0" endY="0.009478672985781977" startX="1.0" startY="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.21960784494876862" green="0.5568627715110779" blue="0.23529411852359772" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.49719675888034043">
+                                 <color>
+                                    <Color red="0.4000000059604645" green="0.7333333492279053" blue="0.4156862795352936" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.5058823823928833" green="0.7803921699523926" blue="0.5176470875740051" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                  </Rectangle>
+                  <Text fx:id="textGreen" boundsType="VISUAL" fill="WHITE" layoutX="100.0" layoutY="47.0" onMouseClicked="#onMouseClickedCheckResult" stroke="BLACK" strokeType="OUTSIDE" textAlignment="CENTER">
+                     <font>
+                        <Font name="Pokemon Emerald Latin FC Regular" size="24.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Text>
+               </children>
+            </Pane>
+            <Pane fx:id="paneBlue" layoutX="1037.0" layoutY="323.0" onMouseEntered="#onMouseEnteredRectangle" onMouseExited="#onMouseExitedRectangle" prefHeight="75.0" prefWidth="200.0">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" height="75.0" stroke="#01579b" strokeType="INSIDE" strokeWidth="2.0" width="200.0">
+                     <fill>
+                        <LinearGradient endX="1.0" endY="0.009478672985781977" startX="1.0" startY="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.007843137718737125" green="0.5333333611488342" blue="0.8196078538894653" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.604579309215911">
+                                 <color>
+                                    <Color red="0.16078431904315948" green="0.7137255072593689" blue="0.9647058844566345" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.5058823823928833" green="0.8313725590705872" blue="0.9803921580314636" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                  </Rectangle>
+                  <Text fx:id="textBlue" boundsType="VISUAL" fill="WHITE" layoutX="100.0" layoutY="47.0" onMouseClicked="#onMouseClickedCheckResult" stroke="BLACK" strokeType="OUTSIDE" textAlignment="CENTER">
+                     <font>
+                        <Font name="Pokemon Emerald Latin FC Regular" size="24.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Text>
+               </children>
+               <effect>
+                  <DropShadow>
+                     <color>
+                        <Color red="0.501960813999176" green="0.8470588326454163" blue="1.0" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Pane>
+            <Text fx:id="scoreText" fill="WHITE" layoutX="11.0" layoutY="683.0" stroke="BLACK" strokeType="OUTSIDE" wrappingWidth="200.0">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Text>
+            <Text fx:id="bestScoreText" fill="WHITE" layoutX="14.0" layoutY="705.0" stroke="BLACK" strokeType="OUTSIDE" wrappingWidth="166.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Text>
+            <Button fx:id="nextButton" disable="true" layoutX="1191.0" layoutY="657.0" mnemonicParsing="false" onAction="#nextButton" style="-fx-background-color: #f0c200; -fx-border-color: #0079b8; -fx-border-radius: 2; -fx-border-width: 4;" text="Next" textFill="#0079b8" visible="false">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <effect>
+                  <DropShadow height="26.38" offsetX="-5.0" offsetY="5.0" radius="11.3425" spread="0.16" width="20.99">
+                     <color>
+                        <Color red="0.29280000925064087" green="0.47999998927116394" blue="0.4768800139427185" />
+                     </color>
+                  </DropShadow>
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </Pane>
+      <Pane fx:id="gameOverPanel" disable="true" prefHeight="720.0" prefWidth="1280.0" visible="false">
+         <children>
+            <ImageView fitHeight="720.0" fitWidth="1280.0" layoutX="-6.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Images/BG_GameOver.png" />
+               </image></ImageView>
+            <ImageView fitHeight="228.0" fitWidth="317.0" layoutX="487.0" layoutY="228.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Images/GameOverGIF.gif" />
+               </image>
+            </ImageView>
+            <Pane layoutX="540.0" layoutY="571.0" prefHeight="75.0" prefWidth="200.0">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" height="75.0" strokeType="INSIDE" strokeWidth="2.0" width="200.0">
+                     <fill>
+                        <LinearGradient endX="1.0" endY="0.009478672985781977" startX="1.0" startY="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color green="0.9333333373069763" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.006711409395973154">
+                                 <color>
+                                    <Color green="0.9333333373069763" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.2181208053691275">
+                                 <color>
+                                    <Color red="0.48233431577682495" green="0.9491167068481445" blue="0.9736841917037964" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.4134064495007366">
+                                 <color>
+                                    <Color red="0.7361111044883728" green="0.9912037253379822" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.5539572761499426">
+                                 <color>
+                                    <Color red="1.0" green="0.7083333134651184" blue="0.7083333134651184" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.7714437714846947">
+                                 <color>
+                                    <Color red="1.0" green="0.46296295523643494" blue="0.46296295523643494" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                     <stroke>
+                        <LinearGradient endX="0.909952606635071" endY="0.3033175355450237" startX="0.8625592417061612">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color green="0.9333333373069763" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.006711409395973154">
+                                 <color>
+                                    <Color green="0.9333333373069763" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </stroke>
+                  </Rectangle>
+                  <Text id="test" fill="WHITE" layoutY="48.0" onMouseClicked="#onMouseClickedPlayAgain" stroke="BLACK" strokeType="OUTSIDE" text="Play Again" textAlignment="CENTER" wrappingWidth="200.0">
+                     <font>
+                        <Font name="Pokemon Emerald Latin FC Regular" size="24.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Text>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

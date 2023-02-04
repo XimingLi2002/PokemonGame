@@ -1,0 +1,8 @@
+#progressBar {
+    -fx-background-radius: 0;
+    -fx-text-box-border: #C396FF;
+    -fx-control-inner-background: #DDC3FF;
+}
+#progressBar {
+    -fx-background-color: linear-gradient(to left, #C3FFF9, #2CFFCF);
+}

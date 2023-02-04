@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="562.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Game.GameStartController">
+   <children>
+      <Pane prefHeight="562.0" prefWidth="850.0">
+         <children>
+            <ImageView fitHeight="562.0" fitWidth="850.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Images/BG_GameStart.png" />
+               </image>
+            </ImageView>
+            <ProgressBar id="progressBar" fx:id="PG_startCheck" layoutX="13.0" layoutY="530.0" opacity="0.15" prefWidth="200.0" progress="0.0" stylesheets="@Css/GameStart.css" />
+            <Pane layoutX="37.0" layoutY="466.0" onMouseEntered="#updateProgressBar" onMouseExited="#updateProgressBar">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="54.0" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="INSIDE" strokeWidth="3.0" width="152.0">
+                     <stroke>
+                        <LinearGradient endX="1.0" endY="1.0" startX="0.7251184834123223" startY="0.5971563981042654">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.6000000238418579" green="0.41960784792900085" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.006711409395973154">
+                                 <color>
+                                    <Color red="0.6000000238418579" green="0.41960784792900085" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.8352941274642944" green="0.7568627595901489" blue="0.9921568632125854" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </stroke>
+                  </Rectangle>
+                  <Text fx:id="start" boundsType="VISUAL" layoutX="-2.0" layoutY="37.0" onMouseClicked="#openGame" onMouseMoved="#updateCursor" strokeType="OUTSIDE" strokeWidth="3.0" text="Sᴛᴀʀᴛ" textAlignment="CENTER" underline="true" wrappingWidth="154.0">
+                     <font>
+                        <Font name="System Bold" size="36.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                     <fill>
+                        <LinearGradient endX="1.0" endY="1.0" startX="0.6018957345971564" startY="0.5545023696682465">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.9490196108818054" green="0.8078431487083435" blue="0.30588236451148987" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.006711409395973154">
+                                 <color>
+                                    <Color red="0.9490196108818054" green="0.8078431487083435" blue="0.30588236451148987" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.9764705896377563" green="0.9137254953384399" blue="0.6980392336845398" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                     <stroke>
+                        <LinearGradient endX="1.0" endY="1.0" startX="0.6445497630331753" startY="0.5971563981042655">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.2823529541492462" green="0.38823530077934265" blue="0.9529411792755127" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.006711409395973154">
+                                 <color>
+                                    <Color red="0.2823529541492462" green="0.38823530077934265" blue="0.9529411792755127" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.761744966442953">
+                                 <color>
+                                    <Color red="0.43529412150382996" green="0.5058823823928833" blue="0.9647058844566345" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.6117647290229797" green="0.6470588445663452" blue="0.9725490212440491" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </stroke>
+                  </Text>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
